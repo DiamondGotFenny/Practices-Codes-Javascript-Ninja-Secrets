@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>test01</title>
+    <style>
+      #first {
+        color: greenyellow;
+      }
+      #second {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="first"></ul>
+    <script>
+      function addMessage(element, message) {
+        var elementMsg = document.createElement("li");
+        elementMsg.textContent = message;
+        element.appendChild(elementMsg);
+      }
+      var first = document.getElementById("first");
+      addMessage(first, "the page is loading");
+    </script>
+    <ul id="second">
+      second
+    </ul>
+    <script>
+      var second = document.getElementById("second");
+      setTimeout(() => {
+        addMessage(second, "the second page is loading");
+      }, 5000);
+      document.body.addEventListener("click", function() {
+        var second = document.getElementById("second");
+        addMessage(second, "Event: click");
+      });
+    </script>
+  </body>
+</html>

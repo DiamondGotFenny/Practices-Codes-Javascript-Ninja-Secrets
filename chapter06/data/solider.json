@@ -1,0 +1,16 @@
+[
+  {
+    "name": "john",
+    "life": 1000,
+    "weapon": "gun",
+    "Helmet": 50,
+    "missionsUrl": "data/missionsUrl.json"
+  },
+  {
+    "name": "ben",
+    "life": 500,
+    "weapon": "sword",
+    "Helmet": 100,
+    "missions": [{ "detailsUrl": "/secondfloor" }, { "target": "/room6" }]
+  }
+]
